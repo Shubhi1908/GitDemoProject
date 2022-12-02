@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.utilities.BaseClass;
+
 public class LoginPage {
 	
 	WebDriver ldriver;
@@ -25,14 +27,17 @@ public class LoginPage {
 	
 	public void setUserName(String uname) {
 		userName.sendKeys(uname);
+		BaseClass.loggerNew.info("Entering username");
 	}
 	
 	public void setPassword(String pwd) {
 		password.sendKeys(pwd);
+		BaseClass.loggerNew.info("Entering password");
 	}
 	
 	public void clickOnLogin() {
 		btnLogin.click();
+		BaseClass.loggerNew.info("Clicking login button");
 	}
 	
 }
